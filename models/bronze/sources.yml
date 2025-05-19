@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+    - name: bronze
+      description: This is a replica of the Postgres database used by our app
+      database: edp_dev #raw
+      schema: bronze #jaffle_shop
+      tables:
+          - name: raw_jaffle_shop_customers
+            description: One record per customer.
+          - name: raw_jaffle_shop_orders
+            description: One record per order. Includes cancelled and deleted orders.
